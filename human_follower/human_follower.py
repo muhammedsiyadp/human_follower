@@ -21,7 +21,7 @@ class HumanFollower(Node):
         self.tf_buffer = Buffer()
         self.tf_listener = TransformListener(self.tf_buffer, self)
         # Parameters
-        self.safe_distance = 0.05  # meters, distance to maintain behind human
+        self.safe_distance = 0.5  # meters, distance to maintain behind human
         self.last_goal = None  # Track last sent goal to avoid spamming
         self.max_delta = 1  # meters, max distance between goals
 

@@ -22,10 +22,10 @@ class HumanDetector(Node):
 
         # Adjustable thresholds 
         self.range_diff_threshold = 0.4  # meters, gap between objects
-        self.min_leg_width = 0.05       # meters
-        self.max_leg_width = 0.2        # meters
-        self.max_leg_dist = 0.5          # meters, distance between legs
-        self.max_distance_to_human = 2.0  # meters
+        self.min_leg_width = 0.09       # meters
+        self.max_leg_width = 0.25        # meters
+        self.max_leg_dist = 0.4          # meters, distance between legs
+        self.max_distance_to_human = 1.2  # meters
 
         # TF2 Buffer and Listener
         self.tf_buffer = Buffer()
@@ -89,10 +89,10 @@ class HumanDetector(Node):
                 marker.pose.position = point_base.point
                 marker.pose.position.z = 0.5  # Center of a 1m tall cylinder
                 marker.pose.orientation.w = 1.0
-                marker.scale.x = 0.5  # Diameter in x (m)
-                marker.scale.y = 0.5  # Diameter in y (m)
-                marker.scale.z = 1.0  # Height (m)
-                marker.color.a = 1.0  # Alpha (fully opaque)
+                marker.scale.x = 0.1  # Diameter in x (m)
+                marker.scale.y = 0.1  # Diameter in y (m)
+                marker.scale.z = 0.5  # Height (m)
+                marker.color.a = 0.5  # Alpha (fully opaque)
                 marker.color.r = 0.0  # Red
                 marker.color.g = 1.0  # Green
                 marker.color.b = 0.0  # Blue
